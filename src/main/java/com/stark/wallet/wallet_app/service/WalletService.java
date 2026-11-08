@@ -32,6 +32,7 @@ public class WalletService {
 
 
     public WalletService(WalletRepository walletRepository, TransactionRepository transactionRepository, IdempotencyKeyRepository idempotencyKeyRepository, RedisTemplate<String, String> redisTemplate){
+        this.idempotencyKeyRepository=idempotencyKeyRepository;
         this.walletRepository=walletRepository;
         this.transactionRepository=transactionRepository;
         this.redisTemplate = redisTemplate;
